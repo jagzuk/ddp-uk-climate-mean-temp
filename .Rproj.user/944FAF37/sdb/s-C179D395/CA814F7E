@@ -1,0 +1,16 @@
+{
+    "contents" : "library(ggplot2)\n\nshinyServer(function(input, output) {\n   \n   data.raw <- read.csv(\"UK_Mean_Temp.csv\", stringsAsFactors=FALSE)\n   \n   output$main_plot <- renderPlot({\n\n      if (input$season == 'Winter')\n         g <- ggplot(data.raw, aes(x=Year, y=WIN)) + geom_point(shape=1)\n      \n      if (input$season == 'Spring')\n         g <- ggplot(data.raw, aes(x=Year, y=SPR)) + geom_point(shape=1)\n\n      if (input$season == 'Summer')\n         g <- ggplot(data.raw, aes(x=Year, y=SUM)) + geom_point(shape=1)\n\n      if (input$season == 'Autumn')\n         g <- ggplot(data.raw, aes(x=Year, y=AUT)) + geom_point(shape=1)\n\n      if (input$season == 'All Seasons')\n         g <- ggplot(data.raw, aes(x=Year, y=ANN)) + geom_point(shape=1)\n      \n      \n      \n      if (input$linear_model)\n         g <- g + geom_smooth(method=lm)\n      \n      if (input$loess_model)\n         g <- g + geom_smooth(color='red')\n\n      g <- g + ylab(\"Degrees Celcius\")\n      g <- g + ggtitle(input$season)\n      \n      print(g)\n   \n   })\n})\n# (c) 2016 jagzuk\n",
+    "created" : 1454263003879.000,
+    "dirty" : false,
+    "encoding" : "ISO8859-1",
+    "folds" : "",
+    "hash" : "167085261",
+    "id" : "CA814F7E",
+    "lastKnownWriteTime" : 1454255402,
+    "path" : "~/R/devdataprod/ddp-uk-climate-mean-temp/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "---\ntitle: \"UK Climate Mean Temperature Explorer\"\nauthor: \"R A Jagger (jagzuk)\"\ndate: \"Sunday, January 31, 2016\"\noutput: slidy_presentation\n---\n\n## UK Climate Mean Temperature Explorer\n### Executive Summary\nMany examples of Shiny are based on US datasets and, since I live in the UK, I have chosen to develop an application that is relevant to my locale. \n\nThe dataset and code that I have used in this application has not been used elswhere in the Data Science course materials, and I hope that readers and reviwers will find the results interesting as well as orginal.      \n\n[Launch Application](https://jagzuk.shinyapps.io/ddp-uk-climate-mean-temp/)\n\n## UK Climate Mean Temperature Explorer\n### About the dataset\nThe dataset used for this application was obtained from the UK MetOffice, an agency of the UK Government. Datasets are provided by UK Region and provide data reaching back (at time of download) from 2015 to 1910.\n\nThe MetOffice provides many datasets of climate data including Max, Min and Mean temperatures and other weather records such as sunshine, rainfall and air frost. For this application I was interested in average temparature change over the last century or so, and selected the Mean temparature dataset pre-ordered by Year.\n\n[UK MetOffice Regional Climate Datasets](http://www.metoffice.gov.uk/climate/uk/summaries/datasets)\n\n## UK Climate Mean Temperature Explorer\n#### Data cleaning and processing\nThe data is used in its raw downloaded format. The only modification of the dataset was to remove descriptive text from the begining of the file and to convert it to csv format. This reduces the need for pre-processing steps in the published application, whilst maintaining maximum data fidelity. \n\n#### Data Selection and Analysis\nThe application displays the Mean temperature for the entire timeseries (1910 - 2015) and allows finer selection by season. For example, selecting the Season as Winter will display the Mean temperature recorded accosss Winter months. \n\nIn adddition, the application allows for Linear and Loess analysis lines and confidence intervals to be layered over the temperature plot.\n\nThe chart is automatically updated whenever the Season or the analysis options are changed.\n\n## UK Climate Mean Temperature Explorer\n#### Application Code\nThe application requires only one library - ggplot2- which is used to render the chart. The scatterplot is rendered using the ggplot function geom_point, and the linear and loess models are  rendered using geom_smooth.\n\n\n",
+    "created" : 1454259997689.000,
+    "dirty" : true,
+    "encoding" : "ISO8859-1",
+    "folds" : "",
+    "hash" : "354161722",
+    "id" : "47BB5577",
+    "lastKnownWriteTime" : 1454262872,
+    "path" : "~/R/devdataprod/ddp-uk-climate-mean-temp/Pitch.Rmd",
+    "project_path" : "Pitch.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
