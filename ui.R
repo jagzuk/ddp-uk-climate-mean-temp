@@ -1,4 +1,3 @@
-deplylibrary(ggplot2)
 
 shinyUI(pageWithSidebar(
 
